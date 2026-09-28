@@ -35,6 +35,9 @@ export default function Header() {
             <Link key={l.href} href={l.href}>{l.label}</Link>
           ))}
         </nav>
+        <a className="nav__call" href="tel:+12405229075" aria-label="Call BMO LLC at (240) 522-9075">
+          Call <span className="nav__callNum">(240) 522-9075</span>
+        </a>
         <Link className="btn btn--sm nav__cta" href="/contact">
           Get a Consultation
         </Link>

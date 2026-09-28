@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Marquee from "@/components/Marquee";
+import ReviewsSlider from "@/components/ReviewsSlider";
 
 const TRUST = [
   { count: 20, suffix: "+", label: "Projects completed" },
@@ -8,11 +9,38 @@ const TRUST = [
   { text: "L&I", label: "Licensed & insured" },
 ];
 const SERVICES = [
-  { n: "01", t: "Whole Home Renovations", b: "Top-to-bottom transformations, planned and built under one roof." },
-  { n: "02", t: "Home Additions", b: "More square footage that looks like it was always there." },
-  { n: "03", t: "Kitchens", b: "The room that sells the house, built to work as hard as it looks." },
-  { n: "04", t: "Bathrooms", b: "Primary suites to powder rooms, finished to a high standard." },
-  { n: "05", t: "Basements", b: "Unused space turned into real, livable square footage." },
+  { n: "01", t: "Whole Home Renovations", b: "Top-to-bottom transformations, planned and built under one roof.", href: "/portfolio?category=whole-home" },
+  { n: "02", t: "Home Additions", b: "More square footage that looks like it was always there.", href: "/portfolio?category=additions" },
+  { n: "03", t: "Kitchens", b: "The room that sells the house, built to work as hard as it looks.", href: "/portfolio?category=kitchens" },
+  { n: "04", t: "Bathrooms", b: "Primary suites to powder rooms, finished to a high standard.", href: "/portfolio?category=bathrooms" },
+  { n: "05", t: "Basements", b: "Unused space turned into real, livable square footage.", href: "/portfolio" },
+];
+const REVIEWS = [
+  {
+    name: "Sidney Keffler",
+    project: "Kitchen Remodeling",
+    text: "Working with Billy and the BMO team was a great experience. Our kitchen needed a complete transformation, and they helped us turn our ideas into a beautiful, functional space. Billy was approachable, patient, and always willing to explain the process. The attention to detail, from the cabinetry to the finishing touches, made all the difference. We especially appreciated how carefully the team treated our home throughout the renovation. We couldn't be happier with how everything came together.",
+  },
+  {
+    name: "Bruce & Mai McCoy",
+    project: "Bathroom Remodeling",
+    text: "We had been putting off our bathroom renovation for years because we weren't sure where to begin. Billy made the entire experience much easier than we expected. He listened to what we wanted, helped us think through the design, and kept us informed throughout the project. The finished bathroom is beautiful. The tile work, shower, vanity, and lighting all came together perfectly. What impressed us most was the care and professionalism of everyone involved.",
+  },
+  {
+    name: "Obi & Ifeoma Mba",
+    project: "Basement Remodeling",
+    text: "Our basement was an underused space that had so much potential. BMO helped us transform it into a comfortable area where our family can relax and entertain guests. Billy was involved throughout the process and made sure our concerns were addressed. The team paid attention to everything, including lighting, flooring, storage, and the overall flow of the space. The difference is incredible. It now feels like a natural extension of our home rather than just a finished basement.",
+  },
+  {
+    name: "Kelly B",
+    project: "Home Addition",
+    text: "Adding more space to our home was a major decision, and choosing the right contractor mattered to us. Billy took the time to understand what we wanted and walked us through the different stages of the project. Communication was consistent, and we always felt comfortable asking questions. The new addition blends beautifully with the original house, both inside and outside. We appreciate the workmanship and care that went into creating a space our family can enjoy for years.",
+  },
+  {
+    name: "Ray O'Neal",
+    project: "Whole Home Renovation",
+    text: "Renovating an entire home can feel overwhelming, but our experience with BMO was reassuring from beginning to end. Billy was honest in his communication, attentive to the details, and genuinely interested in understanding our vision. The team worked through the different areas of the house with care, keeping the overall design consistent. Our kitchen, bathrooms, living areas, and finishes now feel connected in a way they never did before. We love our transformed home and appreciate the work that went into it.",
+  },
 ];
 const WHY = [
   { t: "One roof", b: "Design, build, and finish by the same team. No finger-pointing between trades." },
@@ -31,8 +59,7 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="hero__media">
-          <img src="/images/hero-kitchen.jpg" alt="Renovated kitchen (placeholder image)" />
-          <span className="tag tag--br">Placeholder / not actual project</span>
+          <img src="/images/hero-kitchen.jpg" alt="Renovated kitchen" />
         </div>
         <div className="hero__scrim" />
         <div className="hero__inner">
@@ -82,11 +109,11 @@ export default function Home() {
           </div>
           <div className="svc">
             {SERVICES.map((s, i) => (
-              <article className="svc__card reveal" key={s.t} style={{ "--d": i * 70 + "ms" }}>
+              <Link className="svc__card reveal" href={s.href} key={s.t} style={{ "--d": i * 70 + "ms" }}>
                 <span className="svc__num">{s.n}</span>
                 <h3 className="svc__title">{s.t}</h3>
                 <p className="svc__body">{s.b}</p>
-              </article>
+              </Link>
             ))}
           </div>
           <p className="svc__note reveal">Interior and exterior painting available as an add-on to any build.</p>
@@ -103,15 +130,13 @@ export default function Home() {
           <div className="work">
             <figure className="proj reveal">
               <div className="proj__img">
-                <img src="/images/project-bath.jpg" alt="Primary bath remodel (placeholder)" />
-                <span className="tag">Placeholder</span>
+                <img src="/images/project-bath.jpg" alt="Primary bath remodel" />
               </div>
               <figcaption><span className="proj__cat">Primary Bath</span><span className="proj__name">Full Remodel</span></figcaption>
             </figure>
             <figure className="proj reveal" style={{ "--d": "90ms" }}>
               <div className="proj__img">
-                <img src="/images/greatroom.jpg" alt="Great room renovation (placeholder)" />
-                <span className="tag">Placeholder</span>
+                <img src="/images/greatroom.jpg" alt="Great room renovation" />
               </div>
               <figcaption><span className="proj__cat">Great Room</span><span className="proj__name">Whole Home Renovation</span></figcaption>
             </figure>
@@ -121,7 +146,6 @@ export default function Home() {
               <span className="proj__ctaArrow">&rarr;</span>
             </Link>
           </div>
-          <p className="work__note reveal">Photography shown is placeholder. Real BMO project photos replace these before launch.</p>
         </div>
       </section>
 
@@ -170,17 +194,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIAL PLACEHOLDER */}
-      <section className="section">
-        <div className="wrap reveal">
-          <p className="kicker">05 / What Clients Say</p>
-          <blockquote className="quote__box">
-            <span className="quote__mark">&ldquo;</span>
-            <p className="quote__placeholder">
-              Real client testimonial goes here. No quotes will be invented. Add
-              verified reviews from completed BMO projects before launch.
-            </p>
-          </blockquote>
+      {/* REVIEWS */}
+      <section className="section" id="reviews">
+        <div className="wrap">
+          <div className="head reveal">
+            <p className="kicker">05 / What Clients Say</p>
+            <h2 className="h2">In their words.</h2>
+          </div>
+          <ReviewsSlider reviews={REVIEWS} />
         </div>
       </section>
 
@@ -194,9 +215,8 @@ export default function Home() {
           </p>
           <div className="cta__actions">
             <Link className="btn btn--lg" href="/contact">Request a Consultation</Link>
-            <a className="btn btn--ghost btn--lg" href="tel:+13015550000">(301) 555-0000</a>
+            <a className="btn btn--ghost btn--lg" href="tel:+12405229075">(240) 522-9075</a>
           </div>
-          <p className="cta__note">Phone is a placeholder. Swap in the real line.</p>
         </div>
       </section>
     </main>

@@ -93,15 +93,10 @@ export default function Services() {
         <div className="ahero__rule" />
       </section>
 
-      <section className="band reveal">
-        <div
-          className="band__img"
-          data-parallax
-          role="img"
-          aria-label="BMO project work (placeholder image)"
-          style={{ backgroundImage: "url('/images/services-hero.jpg')" }}
-        />
-        <span className="tag">Placeholder / not actual project</span>
+      <section className="band">
+        <div className="band__img" data-parallax role="img" aria-label="BMO project work">
+          <div className="band__kb" style={{ backgroundImage: "url('/images/services-hero.jpg')" }} />
+        </div>
         <div className="band__overlay" />
       </section>
 
@@ -118,8 +113,7 @@ export default function Services() {
               key={s.title}
             >
               <div className="svcblock__media">
-                <img src={s.img} alt={`${s.title} project (placeholder image)`} />
-                <span className="tag">Placeholder / not actual project</span>
+                <img src={s.img} alt={`${s.title} project`} />
               </div>
               <div className="svcblock__content">
                 <span className="svcblock__num">{s.num}</span>
@@ -147,9 +141,8 @@ export default function Services() {
           </p>
           <div className="cta__actions">
             <Link className="btn btn--lg" href="/contact">Request a Consultation</Link>
-            <a className="btn btn--ghost btn--lg" href="tel:+13015550000">(301) 555-0000</a>
+            <a className="btn btn--ghost btn--lg" href="tel:+12405229075">(240) 522-9075</a>
           </div>
-          <p className="cta__note">Phone is a placeholder. Swap in the real line.</p>
         </div>
       </section>
     </main>

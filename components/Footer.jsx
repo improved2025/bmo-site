@@ -36,9 +36,8 @@ export default function Footer() {
         </div>
         <div className="foot__col">
           <h5>Contact</h5>
-          <span className="foot__ph">(301) 555-0000</span>
-          <span className="foot__ph">hello@bmollc.com</span>
-          <span className="foot__ph foot__ph--dim">Contact details are placeholders</span>
+          <a href="tel:+12405229075">(240) 522-9075</a>
+          <a href="mailto:BMOGenCon@gmail.com">BMOGenCon@gmail.com</a>
         </div>
       </div>
       <div className="wrap foot__bar">

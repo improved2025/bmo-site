@@ -52,8 +52,7 @@ export default function About() {
       </section>
 
       <section className="band reveal">
-        <div className="band__img" data-parallax role="img" aria-label="Renovated open living space (placeholder image)" style={{ backgroundImage: "url('/images/greatroom.jpg')" }} />
-        <span className="tag">Placeholder / not actual project</span>
+        <div className="band__img" data-parallax role="img" aria-label="Renovated open living space" style={{ backgroundImage: "url('/images/greatroom.jpg')" }} />
         <div className="band__overlay">
           <p className="band__text">Homes built for how families<br />actually live.</p>
         </div>
@@ -108,9 +107,8 @@ export default function About() {
           <p className="cta__body">Tell us what you&apos;re picturing. We&apos;ll tell you straight what it takes, what it costs, and how to make it better.</p>
           <div className="cta__actions">
             <Link className="btn btn--lg" href="/contact">Request a Consultation</Link>
-            <a className="btn btn--ghost btn--lg" href="tel:+13015550000">(301) 555-0000</a>
+            <a className="btn btn--ghost btn--lg" href="tel:+12405229075">(240) 522-9075</a>
           </div>
-          <p className="cta__note">Phone is a placeholder. Swap in the real line.</p>
         </div>
       </section>
     </main>

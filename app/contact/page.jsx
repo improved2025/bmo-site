@@ -34,13 +34,12 @@ export default function Contact() {
             <div className="cinfo">
               <div className="cinfo__row">
                 <span className="cinfo__label">Phone</span>
-                <a className="cinfo__value" href="tel:+13015550000">(301) 555-0000</a>
+                <a className="cinfo__value" href="tel:+12405229075">(240) 522-9075</a>
               </div>
               <div className="cinfo__row">
                 <span className="cinfo__label">Email</span>
-                <a className="cinfo__value" href="mailto:hello@bmollc.com">hello@bmollc.com</a>
+                <a className="cinfo__value" href="mailto:BMOGenCon@gmail.com">BMOGenCon@gmail.com</a>
               </div>
-              <p className="cinfo__note">Phone and email are placeholders. Swap in the real lines before launch.</p>
               <div className="cinfo__row">
                 <span className="cinfo__label">Service Area</span>
                 <div className="cinfo__area">
