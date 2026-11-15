@@ -127,22 +127,22 @@ export default function Home() {
             <p className="kicker">02 / Selected Work</p>
             <h2 className="h2">Recent projects.</h2>
           </div>
-          <div className="work">
-            <figure className="proj reveal">
+          <div className="work work--ba">
+            <Link className="proj reveal" href="/portfolio#bowie">
               <div className="proj__img">
-                <img src="/images/project-bath.jpg" alt="Primary bath remodel" />
+                <img src="/images/bowie/stair-before.webp" alt="Curved staircase with carpet runner before renovation in Bowie, MD" />
               </div>
-              <figcaption><span className="proj__cat">Primary Bath</span><span className="proj__name">Full Remodel</span></figcaption>
-            </figure>
-            <figure className="proj reveal" style={{ "--d": "90ms" }}>
+              <div className="proj__cap"><span className="proj__cat">Before</span><span className="proj__name">Foyer &amp; Staircase, Bowie MD</span></div>
+            </Link>
+            <Link className="proj reveal" href="/portfolio#bowie" style={{ "--d": "90ms" }}>
               <div className="proj__img">
-                <img src="/images/greatroom.jpg" alt="Great room renovation" />
+                <img src="/images/bowie/stair-after.webp" alt="Finished curved staircase with dark treads and black iron balusters in Bowie, MD" />
               </div>
-              <figcaption><span className="proj__cat">Great Room</span><span className="proj__name">Whole Home Renovation</span></figcaption>
-            </figure>
-            <Link className="proj proj--cta reveal" href="/portfolio" style={{ "--d": "180ms" }}>
-              <span className="proj__ctaTop">More on the way</span>
-              <span className="proj__ctaBig">See all projects</span>
+              <div className="proj__cap"><span className="proj__cat">After</span><span className="proj__name">Whole Home Renovation</span></div>
+            </Link>
+            <Link className="proj proj--cta reveal" href="/portfolio#bowie" style={{ "--d": "180ms" }}>
+              <span className="proj__ctaTop">Bowie, MD</span>
+              <span className="proj__ctaBig">See the full project</span>
               <span className="proj__ctaArrow">&rarr;</span>
             </Link>
           </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PortfolioGallery from "@/components/PortfolioGallery";
+import BowieProject from "@/components/BowieProject";
 
 export const metadata = {
   title: "Our Work — BMO LLC",
@@ -24,7 +25,9 @@ export default function Portfolio() {
         <div className="ahero__rule" />
       </section>
 
-      <section className="section pwork">
+      <BowieProject />
+
+      <section className="section section--soft pwork">
         <div className="wrap">
           <PortfolioGallery />
         </div>
