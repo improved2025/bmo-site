@@ -1,6 +1,5 @@
 // Featured case study: whole home renovation in Bowie, MD.
-// Real BMO job photos. Kitchen is still in progress, so it is labeled that way
-// and never shown as an "after". Swap in finished kitchen photos when they arrive.
+// Real BMO job photos.
 
 const B = "/images/bowie";
 
@@ -86,15 +85,24 @@ export default function BowieProject() {
           ))}
         </ol>
 
-        <div className="bowie__wip reveal">
-          <div className="stage__img"><img src={`${B}/kitchen-progress.webp`} alt="New white shaker kitchen under construction" loading="lazy" /></div>
-          <div>
-            <p className="kicker">Still in progress</p>
-            <h3 className="stage__t">The kitchen.</h3>
+        <div className="bowie__kitchen">
+          <div className="head reveal">
+            <p className="kicker">The Kitchen</p>
+            <h3 className="stage__t">Same room.<br />A new kitchen.</h3>
             <p className="stage__b">
-              White shaker cabinetry, veined quartz, and black and brass appliances going in now.
-              Finished photos coming soon.
+              White shaker cabinetry to the ceiling, veined quartz counters with a full height
+              backsplash, black and brass appliances, and the same polished tile that runs through the main level.
             </p>
+          </div>
+          <div className="ba ba--wide reveal">
+            <figure className="ba__panel">
+              <div className="ba__img"><img src={`${B}/kitchen-before.webp`} alt="Kitchen with dark cabinets, granite counters and oak floors before renovation, Bowie MD" loading="lazy" /></div>
+              <figcaption className="ba__tag">Before</figcaption>
+            </figure>
+            <figure className="ba__panel">
+              <div className="ba__img"><img src={`${B}/kitchen-after.webp`} alt="Finished kitchen with white shaker cabinets, veined quartz island and polished tile floors, Bowie MD" loading="lazy" /></div>
+              <figcaption className="ba__tag ba__tag--after">After</figcaption>
+            </figure>
           </div>
         </div>
       </div>
