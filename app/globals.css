@@ -364,6 +364,8 @@ img{display:block;max-width:100%;}
 .stage__img{aspect-ratio:4/5;overflow:hidden;background:var(--paper-2);}
 .stage__img img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease);}
 .stage__img:hover img{transform:scale(1.04);}
+.stage__imgs--3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:560px){.stage__imgs--3{grid-template-columns:1fr 1fr;}.stage__imgs--3 .stage__img:first-child{grid-column:1/-1;aspect-ratio:4/3;}}
 .bowie__kitchen{margin-top:clamp(64px,9vw,110px);border-top:1px solid var(--line);padding-top:clamp(32px,4vw,48px);}
 .bowie__kitchen .head{margin-bottom:clamp(24px,4vw,40px);}
 .ba--wide .ba__img{aspect-ratio:4/3;}

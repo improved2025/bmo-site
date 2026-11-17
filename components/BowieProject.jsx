@@ -9,7 +9,7 @@ const STAGES = [
     t: "Where it started",
     b: "Carpeted stairs, worn oak floors, and a dark wood kitchen.",
     imgs: [
-      { src: `${B}/stair-before.webp`, alt: "Foyer and curved staircase with carpet runner before renovation, Bowie MD" },
+      { src: `${B}/stair-before.webp`, alt: "Foyer and curved staircase with carpet runner and oak floors before renovation, Bowie MD" },
       { src: `${B}/kitchen-before.webp`, alt: "Kitchen with dark cabinets and granite counters before renovation, Bowie MD" },
     ],
   },
@@ -18,6 +18,7 @@ const STAGES = [
     t: "Down to the subfloor",
     b: "Old flooring pulled up and closet walls opened.",
     imgs: [
+      { src: `${B}/stair-demo.webp`, alt: "BMO crew tearing out the foyer flooring around the curved staircase" },
       { src: `${B}/demo-floors.webp`, alt: "BMO crew removing hardwood flooring during demolition" },
       { src: `${B}/demo-walls.webp`, alt: "BMO crew opening closet walls during demolition" },
     ],
@@ -74,7 +75,7 @@ export default function BowieProject() {
                 <h3 className="stage__t">{s.t}</h3>
                 <p className="stage__b">{s.b}</p>
               </div>
-              <div className="stage__imgs">
+              <div className={`stage__imgs${s.imgs.length === 3 ? " stage__imgs--3" : ""}`}>
                 {s.imgs.map((im) => (
                   <div className="stage__img" key={im.src}>
                     <img src={im.src} alt={im.alt} loading="lazy" />
